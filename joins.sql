@@ -88,4 +88,12 @@ select
 -- for example: 694,292.68.
 
 select 
-	* FROM orders;
+	MONTHNAME(paymentDate) as 'Month',
+	YEAR (paymentDate) as 'Year',
+	sum(amount) as 'Payments Received'
+	FROM payments as p
+	JOIN customers as c ON p.customerNumber = c.customerNumber 
+	GROUP BY `Month`, `Year`
+	ORDER BY paymentDate 
+;
+
