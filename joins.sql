@@ -68,7 +68,6 @@ select
 	count(o.orderNumber) as '# of Orders',
 	IF (sum(od.quantityOrdered * od.priceEach) IS NULL
 	, '0.00', sum(od.quantityOrdered * od.priceEach)) as 'Total Sales'
-	-- IF (`# of Orders` = 0), 0, sum(od.quantityOrdered * od.priceEach) as 'Total Sales'
 	FROM orderdetails AS od
 	JOIN orders AS o ON od.orderNumber = o.orderNumber
 	JOIN customers AS c ON o.customerNumber = c.customerNumber 
