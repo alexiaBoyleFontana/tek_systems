@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <style>
+        .invalid {
+            background-color: red;
+        }
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="registerFunctions.js"></script>
+    <style src="register.css"></style>
+    
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+    <a href="home.html">Home</a> &nbsp | &nbsp
+    <a href="register.html">Register</a> &nbsp | &nbsp
+    <a href="login.html">Login</a>
+    <hr>
+
+    <h2>Register</h2>
+
+    <form>
+        First Name <input type="text" name="fName" id="fNameId"> <br>
+        Last Name <input type="text" name="lName" id="lNameId"> <br>
+        Email <input type="email" name="email" id="emailId"> <br>
+        Password <input type="password" name="pass" id="passId"> <br>
+        Confirm Password <input type="password" name="confirmPass" id="cPassId"> <br>
+    
+        <button id="submit"> Input </button>
+    </form>
+
+    <ul style="color:red" id="error">
+        <li hidden id="missFirst">First name is missing.</li>
+        <li hidden id="missLast">Last name is missing.</li>
+        <li hidden id="missEmail">Email is missing.</li>
+        <li hidden id="missPass">Password is missing.</li>
+        <li hidden id="missCPass">Password confirmation is missing.</li>
+        <li hidden id="nameSpace">First name can not have any spaces.</li>
+        <li hidden id="passwordLength">Password must be between 8 and 25 characters.</li>
+        <li hidden id="passwordContains">Password must contain a number and a letter.</li>
+        <li hidden id="passwordMatch">Passwords don't match.</li>
+        <li hidden id="Complete">Creating account...</li>
+    </ulc>
+
+    </div>
+
+    <script src="eventRegister.js"></script>
+
+</body>
+</html>

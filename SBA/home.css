@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'rieslingregular';
+    src: url('fonts/riesling-webfont.woff2') format('woff2'),
+         url('fonts/riesling-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+div {
+    margin: auto;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto;  
+    height: 100vh;
+    gap: 0.5em;
+    margin: 0.5em; 
+}
+
+#welcome {
+    font-family: "rieslingregular";
+    font-weight: bold;
+    font-size: 300%;
+    color: white;
+    background-color: #2E5A88;
+    text-align: center;
+}
+
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+a:hover {
+    color: green;
+
+}
+
